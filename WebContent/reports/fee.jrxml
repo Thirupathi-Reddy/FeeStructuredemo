@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report4" language="groovy" pageWidth="1831" pageHeight="962" columnWidth="1831" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2672c20c-3484-4d4b-8e7d-28df1b82f5ab">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="534"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     admission.`aid` AS admission_aid,
+     admission.`course_type` AS admission_course_type,
+     admission.`student_name` AS admission_student_name,
+     admission.`father_name` AS admission_father_name,
+     admission.`gender` AS admission_gender,
+     admission.`nationality` AS admission_nationality,
+     admission.`cast` AS admission_cast,
+     admission.`blood_group` AS admission_blood_group,
+     admission.`address` AS admission_address,
+     admission.`dob` AS admission_dob,
+     admission.`seat_category` AS admission_seat_category,
+     admission.`rank` AS admission_rank,
+     admission.`qualification` AS admission_qualification,
+     admission.`university` AS admission_university,
+     admission.`opt_sub` AS admission_opt_sub,
+     admission.`academic_year` AS admission_academic_year,
+     admission.`admission_date` AS admission_admission_date,
+     admission.`date_entered` AS admission_date_entered,
+     admission.`photo` AS admission_photo,
+     admission.`comments` AS admission_comments,
+     admission.`registered_no` AS admission_registered_no,
+     fee.`fid` AS fee_fid,
+     fee.`aid` AS fee_aid,
+     fee.`student_name` AS fee_student_name,
+     fee.`year` AS fee_year,
+     fee.`Term` AS fee_Term,
+     fee.`tution_fee` AS fee_tution_fee,
+     fee.`clinical_fee` AS fee_clinical_fee,
+     fee.`intern_fee` AS fee_intern_fee,
+     fee.`total_fee` AS fee_total_fee,
+     fee.`paid_date` AS fee_paid_date,
+     fee.`paid_fee` AS fee_paid_fee,
+     fee.`due_fee` AS fee_due_fee
+FROM
+     `admission` admission INNER JOIN `fee` fee ON admission.`aid` = fee.`aid`]]>
+	</queryString>
+	<field name="admission_student_name" class="java.lang.String"/>
+	<field name="admission_course_type" class="java.lang.String"/>
+	<field name="fee_year" class="java.lang.String"/>
+	<field name="fee_Term" class="java.lang.String"/>
+	<field name="fee_tution_fee" class="java.lang.Float"/>
+	<field name="fee_clinical_fee" class="java.lang.Float"/>
+	<field name="fee_intern_fee" class="java.lang.Float"/>
+	<field name="fee_total_fee" class="java.lang.Float"/>
+	<field name="fee_paid_date" class="java.lang.String"/>
+	<field name="fee_paid_fee" class="java.lang.Float"/>
+	<field name="fee_due_fee" class="java.lang.Float"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="32a6c4c3-97b3-42a1-b761-ea63bcdca8b8"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="199f0eb0-7850-40c3-b041-4d0928478355"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TITLE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="d6296360-bfaf-4ea7-8271-545db0ae993e"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Add a description here]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="44">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="26f419c7-0f66-4eea-9a48-b2fc5b3fec6b"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="112" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="4f3e990f-bbd4-45dd-96cf-40fd3d515fb3"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="134" y="0" width="100" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="fad9961e-3982-4bca-b3dd-ff2915ebed75"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Course Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="275" y="0" width="88" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="92bd1f5b-7276-4ef7-97f1-9d1f92f8bd48"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[year]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="397" y="1" width="93" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="1d93268c-6857-4c9d-858d-091aa096a95b"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Terms]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="555" y="1" width="118" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f793a266-28b5-4e88-b339-c17299915540"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tution Fee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="733" y="1" width="136" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a32082c8-67bd-491e-b38a-8e4ef2f4ccfb"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Clinical Fee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="920" y="1" width="120" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="298d355f-3960-482d-8e4d-e2473f09a2a9"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Intern Fee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1103" y="1" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="32f26caa-0227-499c-9526-f0e0a508fc8b"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Fee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1282" y="1" width="123" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="6fc49a7d-2efc-4423-aef2-a417acc83ba8"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paid Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1478" y="0" width="130" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="25697d13-db2f-4fd9-b84c-ecb3c606bccc"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paid Fee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1671" y="0" width="124" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="25b744b2-8d81-4d38-aba6-8256131bf402"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Due Fee]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="112" height="20" uuid="c63e41de-eac0-4f32-bc96-65b737c95370"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{admission_student_name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="1706" y="0" width="89" height="20" uuid="1112b241-53dd-44b8-a320-0c2f6e931b9e"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fee_due_fee}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="1317" y="0" width="88" height="20" uuid="c5d9247b-6a36-47aa-8748-21aeb9fea8c0"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fee_paid_date}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="591" y="0" width="82" height="20" uuid="a43ed484-2b94-4645-8b79-d2e8995b10bb"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fee_tution_fee}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="1514" y="0" width="94" height="20" uuid="e2e710f6-81bd-41de-8ed1-30075e1b1e6f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fee_paid_fee}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="770" y="0" width="99" height="20" uuid="081c22e6-d55b-49a2-b753-d1733b3c954b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fee_clinical_fee}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="163" y="0" width="58" height="20" uuid="cec044c8-880a-437a-9887-5af23abde8fe"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{admission_course_type}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="299" y="0" width="64" height="20" uuid="30df6810-e685-4fdb-9fc4-be8d6163ff28"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fee_year}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="418" y="0" width="72" height="20" uuid="0b0791cb-fa42-469e-872e-5a7969934975"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fee_Term}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="941" y="0" width="99" height="20" uuid="867a8ea7-e19c-482b-9836-f7ae10750f3f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fee_intern_fee}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="1131" y="0" width="83" height="20" uuid="4ffdfe78-ed9e-4a34-81b1-d780d921d707"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fee_total_fee}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="262">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="795135ee-cfda-48db-90ad-c314a2a95546"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="d13d438b-4976-4b7a-ad89-9a43df31f529"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="7697770b-ff81-4d6c-a49d-db176ed7b931"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
